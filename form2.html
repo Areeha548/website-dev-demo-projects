@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<style type="text/css">
+		.back{background-image: url('back.jpeg');background-repeat: no-repeat;background-position: bottom;background-size: cover;height: 100%;width: 100%}
+		.left{display: inline-block;float: left;margin-left: 250px;margin-top: 100px}
+		#right{display: inline-block;width: 450px;height: 500px;float: right;border: 2px solid;border-color: #F2F2F2;background-color:#F2F2F2;border-radius: 20px;margin-right: 200px;padding-right: 30px;margin-top: 30px;margin-bottom: 10px;padding-left: 30px;padding-bottom: 30px;}
+.input{padding-right:270px ;padding-bottom: 7px;padding-top: 7px;border-radius: 5px;border-color: lightgray;}
+.new{border-radius: 5px;border-color: lightgray;padding-top: 5px;padding-bottom: 5px;}
+#full{display: none;}
+#email{display: none;}
+#mobile{display: none;}
+#CNIC{display: none;}
+#password{display: none;}
+#cpass{display: none;}
+	</style>
+</head>
+<body>
+<div class="back">
+	<div class="left">
+	<img src="lll.jpeg" width="300px">	
+<h1>Account Registration</h1>
+<h4 style="display: inline-block;">Contact:</h4><span>admissions@ue.edu.pk</span>
+</div>
+<div id="right">
+<h1>Sign Up</h1>	
+<span>The University of Education-Admission Portal</span><br><br>
+<label>Full Name:</label><br>
+<input type="text" placeholder="Full name" class="input" id="element1" ><br>
+<span id="full">Kindly fill the field..!</span>
+<label>Email:</label><br>
+<input type="email" placeholder="example@gmail.com" class="input" id="element2"><br>
+<span id="email">Kindly fill the field..!</span>
+<div style="display: inline-block;width:450px; ">
+	<div style="display: inline-block;float: left">
+<label>Mobile Number:</label><br>
+<input type="Number" placeholder="03XXXXXXXXX" class="new" id="element3">
+<span id="mobile" style="width: 170px">Kindly fill the field..!</span>
+</div>
+<div style="display: inline-block;float: right;">
+<label>CNIC:[without dashes.]</label><br>
+<input type="Number" class="new" id="element4">
+<span id="CNIC" style="width: 170px;">Kindly fill the field..!</span>
+</div>
+<div style="clear: both;"></div>
+</div>
+<label>Password:[password must be minimum of 8 character.]</label><br>
+<input type="password" class="input" id="element5"><br>
+<span id="password">Kindly fill the field..!</span>
+<label>Confirm Password:</label><br>
+<input type="password" class="input" id="element6" ><br>
+<span id="cpass">Kindly fill the field..!</span>
+<br><input type="checkbox">
+<span>I agree to terms & conditions:</span>
+<a href="#" style="color: #E887F2">click here to download</a><br><br>
+<button type="button" style="background-color: #E887F2;color:white;padding-left: 30px;padding-right: 30px;margin-left: 325px;border-color: #E887F2;padding-bottom: 6px;padding-top: 6px;border-radius: 5px;" onclick="var element1=document.getElementById('element1')
+var element2=document.getElementById('element2')
+var element3=document.getElementById('element3')
+var element4=document.getElementById('element4')
+var element5=document.getElementById('element5')
+var element6=document.getElementById('element6')
+if (element1.value=='') 
+{	document.getElementById('full').style.display='block';
+	document.getElementById('full').style.color='red';
+
+}
+else{
+	document.getElementById('full').style.display='none';
+}
+ 
+if (element2.value=='') 
+{	document.getElementById('email').style.display='block';
+	document.getElementById('email').style.color='red';
+}
+else{document.getElementById('email').style.display='none';}
+if (element2.value.includes('@gmail.com')) {
+	document.getElementById('email').innerHTML='correct email';
+document.getElementById('email').style.color='green';
+}
+else{document.getElementById('email').innerHTML='Kindly enter correct format';
+document.getElementById('email').style.color='red';}
+if (element3.value=='') 
+{	document.getElementById('mobile').style.display='block';
+	document.getElementById('mobile').style.color='red';
+}
+ else{document.getElementById('mobile').style.display='none';}
+
+if (element4.value=='') 
+{	document.getElementById('CNIC').style.display='block';
+	document.getElementById('CNIC').style.color='red';
+}
+else{document.getElementById('CNIC').style.display='none';}
+if (element5.value=='') 
+{	document.getElementById('password').style.display='block';
+	document.getElementById('password').style.color='red';
+}
+else{document.getElementById('password').style.display='none';}
+if (element6.value=='') 
+{	document.getElementById('cpass').style.display='block';
+	document.getElementById('cpass').style.color='red';
+}
+else{document.getElementById('cpass').style.display='none';}
+document.getElementById('right').style.height='650px';
+">Register</button><br><br>
+<span>if you already register please</span>
+<a href="#" style="color: #E887F2">login here</a>
+</div>
+
+<div style="clear: both;"></div>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
